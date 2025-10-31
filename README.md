@@ -44,20 +44,38 @@ This workflow is perfect for:
 
 ---
 
-## 💡 Notes
-- Ensure **API keys and credentials** are secure  
-- This workflow can be **extended** to other job portals like Indeed, Glassdoor, etc.  
-- Modify Google Sheet template as per your preference  
+## 📄 Workflow JSON Preview
+Here’s a snippet of the workflow JSON with syntax highlighting:
 
----
-
-## 🔗 Demo / Links
-- [JSON Workflow File](AjenticAI_Workflow.json)  
-- [Portfolio / Project Overview](https://jatin-sharma-port-folio.netlify.app/)  
-
----
-
-## 👨‍💻 Author
-**Jatin Sharma** – B.Tech CSE (AI & Automation Enthusiast)  
-- [LinkedIn](https://www.linkedin.com/in/jatin-sharma14/)  
-- [GitHub](https://github.com/Jatin5760)
+```json
+{
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [250, 300]
+    },
+    {
+      "parameters": {
+        "url": "https://api.linkedin.com/v2/jobs",
+        "options": {}
+      },
+      "name": "LinkedIn Job Fetch",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 1,
+      "position": [450, 300]
+    },
+    {
+      "parameters": {
+        "functionCode": "// AI Resume Matching code here"
+      },
+      "name": "Resume Matching",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [650, 300]
+    }
+  ],
+  "connections": {}
+}
