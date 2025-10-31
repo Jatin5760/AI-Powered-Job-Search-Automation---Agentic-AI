@@ -1,5 +1,7 @@
 # AjenticAI - AI-Powered Job Search Automation 🤖💼
 
+![AjenticAI Workflow](N8N-Workflow.png)
+
 [![Workflow](https://img.shields.io/badge/N8N-Workflow-blue?logo=n8n)](#)
 
 ## Overview
